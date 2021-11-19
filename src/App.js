@@ -10,9 +10,7 @@ function App() {
   const responseGoogle = (response) => {
     console.log(response);
   };
-  const responseFailed = (response) => {
-    console.log("An Error When U login..");
-  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -27,7 +25,7 @@ function App() {
         <GoogleLogin
           clientId="1091161395922-d52i27k59c6bptbotqlec8tbqeqp12sf.apps.googleusercontent.com"
           onSuccess={responseGoogle}
-          onFailure={responseFailed}
+          //onFailure={responseFailed}
           fields="name,email,picture"
           buttonText="Login with Google"
           buttonStyle={{ padding: "6px" }}
@@ -35,7 +33,7 @@ function App() {
         />
       </header>
 
-      <MessengerCustomerChat pageId="103046775543295" appId="639360217231205" />
+      {/* <MessengerCustomerChat pageId="103046775543295" appId="639360217231205" /> */}
     </div>
   );
 }
