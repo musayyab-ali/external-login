@@ -1,5 +1,6 @@
 import "./App.css";
 import FacebookLogin from "react-facebook-login";
+import MessengerCustomerChat from "react-messenger-customer-chat";
 
 function App() {
   const responseFacebook = (response) => {
@@ -15,6 +16,8 @@ function App() {
           callback={responseFacebook}
         />
       </header>
+
+      <MessengerCustomerChat pageId="103046775543295" appId="639360217231205" />
     </div>
   );
 }
