@@ -33,7 +33,7 @@ function App() {
         />
       </header>
 
-      {/* <MessengerCustomerChat pageId="103046775543295" appId="639360217231205" /> */}
+      <MessengerCustomerChat pageId="103046775543295" appId="639360217231205" />
     </div>
   );
 }
