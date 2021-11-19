@@ -1,10 +1,17 @@
 import "./App.css";
 import FacebookLogin from "react-facebook-login";
 import MessengerCustomerChat from "react-messenger-customer-chat";
+import GoogleLogin from "react-google-login";
 
 function App() {
   const responseFacebook = (response) => {
     console.log(response);
+  };
+  const responseGoogle = (response) => {
+    console.log(response);
+  };
+  const responseFailed = (response) => {
+    console.log("An Error When U login..");
   };
   return (
     <div className="App">
@@ -14,6 +21,17 @@ function App() {
           autoLoad={false}
           fields="name,email,picture"
           callback={responseFacebook}
+          onClick={responseFacebook}
+        />
+        <br />
+        <GoogleLogin
+          clientId="1091161395922-d52i27k59c6bptbotqlec8tbqeqp12sf.apps.googleusercontent.com"
+          onSuccess={responseGoogle}
+          onFailure={responseFailed}
+          fields="name,email,picture"
+          buttonText="Login with Google"
+          buttonStyle={{ padding: "6px" }}
+          callback={responseGoogle}
         />
       </header>
 
